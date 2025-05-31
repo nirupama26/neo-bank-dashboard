@@ -48,6 +48,7 @@ PostgreSQL
 2)Update the credentials (username & password) in the file:
 
 demo/demo/src/main/resources/application.properties
+
 spring.datasource.url=jdbc:postgresql://localhost:5432/neobank
 spring.datasource.username=your_db_username
 spring.datasource.password=your_db_password
