@@ -1,7 +1,7 @@
 # 💰 NeoBank Dashboard
 
 A secure full-stack **NeoBank** application built with **React (frontend)** and **Spring Boot (backend)**.  
-It enables users to register, log in, view their account balance, and perform credit/debit transactions with JWT-based authentication.
+It enables users to register, log in, view account balance, and perform credit/debit transactions with JWT-based authentication.
 
 ---
 
