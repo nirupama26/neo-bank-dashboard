@@ -54,6 +54,13 @@ spring.datasource.username=your_db_username
 spring.datasource.password=your_db_password
 spring.jpa.hibernate.ddl-auto=update
 
+✅ Note: These are the default credentials used for development:
+
+Username: postgres
+Password: admin
+
+Make sure PostgreSQL is running locally before starting the backend.
+
 2️⃣ Run the Backend (Spring Boot)
 cd demo/demo         # Navigate to backend directory
 mvn spring-boot:run  # Start Spring Boot backend
