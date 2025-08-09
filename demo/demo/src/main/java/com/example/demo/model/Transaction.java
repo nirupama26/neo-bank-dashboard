@@ -17,7 +17,7 @@ public class Transaction {
     private String type; // "credit" or "debit"
     private int amount;
   
-    @CreationTimestamp  // ✅ Now it's correctly placed
+    @CreationTimestamp  //  Now it's correctly placed
     private LocalDateTime timestamp;
 
     // Default constructor
