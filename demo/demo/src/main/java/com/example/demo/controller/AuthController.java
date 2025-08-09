@@ -31,7 +31,7 @@ public class AuthController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    // ✅ Add a transaction (uses authenticated email)
+    //  Add a transaction (uses authenticated email)
     @PostMapping("/transactions")
     public ResponseEntity<?> addTransaction(@RequestBody Map<String, Object> payload) {
         String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -45,7 +45,7 @@ public class AuthController {
         return ResponseEntity.ok("Transaction saved!");
     }
 
-    // ✅ Fetch all transactions for the authenticated user
+    //  Fetch all transactions for the authenticated user
     @GetMapping("/transactions")
     public ResponseEntity<?> getAllTransactions() {
         String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -53,7 +53,7 @@ public class AuthController {
         return ResponseEntity.ok(transactions);
     }
 
-    // ✅ Get account summary for authenticated user
+    //  Get account summary for authenticated user
     @GetMapping("/account")
     public ResponseEntity<?> getAccount() {
         String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -85,7 +85,7 @@ public class AuthController {
         return ResponseEntity.ok(accountData);
     }
 
-    // ✅ Registration remains public
+    //  Registration remains public
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody User newUser) {
         Optional<User> existingUser = userRepository.findByEmail(newUser.getEmail());
@@ -97,7 +97,7 @@ public class AuthController {
         return ResponseEntity.ok("User registered successfully!");
     }
 
-    // ✅ Login remains public
+    //  Login remains public
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody User loginRequest) {
         Optional<User> userOptional = userRepository.findByEmail(loginRequest.getEmail());
